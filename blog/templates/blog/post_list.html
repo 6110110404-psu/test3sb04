@@ -1,6 +1,67 @@
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Django LAB</title>
+        <style>
+            body {
+              background-image: url("https://wallpapercave.com/wp/wp2754860.jpg");
+            }
+            
+            h1 {
+              color: maroon;
+              text-align: center;
+              text-decoration: underline;
+              text-transform: uppercase;
+              text-shadow: 2px 2px 5px red;
+              margin-top: 50px;
+              font-family: "Lucida Console", "Courier New", monospace;
+            }
+            h2 {
+              text-align: center;
+              text-transform: uppercase;
+              text-shadow: 2px 2px 5px red;
+              margin-top: 50px;
+            }
+            p {
+              text-align: center;
+              text-transform: uppercase;
+              margin-top: 50px;
+              font-weight: bold;
+              font-size: 20px;
+              text-shadow: 2px 2px rgb(238, 15, 15);
+            }
+
+            input[type=text], select {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+            }
+
+            input[type=submit] {
+                width: 100%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+
+            div {
+                border-radius: 5px;
+                padding: 20px;
+                color: #ffffff;
+            }
+            
+        </style>
     </head>
     <body>
         <div>
@@ -14,5 +75,30 @@
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>
         {% endfor %}
+
+        <div>
+            <form action="/action_page.php">
+              <label for="fname">First Name</label>
+              <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          
+              <label for="lname">Last Name</label>
+              <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+              <label for="lname">Email</label>
+              <input type="text" id="lname" name="lastname" placeholder="xxxxxxxxxx@psu.ac.th">
+          
+              <label for="country">Year</label>
+              <select id="country" name="country">
+                <option value="australia">ปี1</option>
+                <option value="canada">ปี2</option>
+                <option value="usa">ปี3</option>
+                <option value="usa">ปี4</option>
+                <option value="usa">ปีสูง</option>
+              </select>
+            
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+
     </body>
 </html>
